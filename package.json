@@ -1,0 +1,15 @@
+{
+  "name": "report-regal-kindhearted-dog",
+  "version": "1.0.0",
+  "description": "Bericht über Werkstudententätigkeit von Christoph Stach bei der DERICON GmbH.",
+  "scripts": {
+    "watch": "latexmk -pvc -pdf -output-directory=out main.tex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophstach/report-regal-kindhearted-dog.git"
+  },
+  "author": "Christoph Stachg",
+  "license": "ISC",
+  "homepage": "https://github.com/christophstach/report-regal-kindhearted-dog#readme"
+}
