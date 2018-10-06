@@ -1,5 +1,14 @@
 # report-regal-kindhearted-dog
 
+## Requirements
+
 ```bash
-$ latexmk -pvc -pdf -output-directory=out main.tex
+$ apt install texlive
+$ pip install Pygments
+```
+
+## Compile it
+
+```bash
+$ latexmk -pvc -pdf -shell-escape -output-directory=out main.tex
 ```
