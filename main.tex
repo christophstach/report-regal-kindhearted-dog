@@ -212,10 +212,12 @@
     from gensim.models import FastText
 
     model: FastText = FastText.load_fasttext_format('embeddings/cc.de.300.bin')
-        .toString()
-        .toJarack()
 
-    print(model.wv['Haus'])
+    # Das ist ein Kommentar
+
+    print(model.similarity('Mann', 'Junge'))
+    print(model.similarity('Mann', 'Kuh'))
+    print(model.most_similar('Mann'))
     \end{minted}
 
 \end{document}
