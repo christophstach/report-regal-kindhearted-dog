@@ -5,9 +5,10 @@
 \usepackage[bottom=48mm,left=25mm,right=25mm]{geometry}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[stretch=10]{microtype}
+\usepackage{color}
 \usepackage{scrhack}
 \usepackage{titling}
-\usepackage{listings}
+\usepackage[outputdir=out]{minted}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[ngerman]{babel}
@@ -15,6 +16,10 @@
 \renewcommand*{\chapterheadstartvskip}{\vspace*{.25\baselineskip}}
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
 \let\endchangemargin=\endlist
+
+\definecolor{htwgrau}{RGB}{150, 150, 150}
+\definecolor{htwgruen}{RGB}{117, 183, 0}
+
 
 \title{Bericht über Werkstudententätig bei der DERICON GmbH}
 \author{Christoph Stach}
@@ -122,7 +127,7 @@
     Alle neuen Features sowie anfallende Bugs werden hier gespeichert.
     Bei der Sprintplanung wird besprochen welche \footnote{In Jira werden Fehler, Features und andere Artefakte generell als Issues bezeichnet.}Issues
     im kommenden Sprint umgesetzt werden sollen. Die Issues werden über den Sprint hinweck vom Teamleader an die einzelnen Entwickler verteilt. Auch ist es möglich sich selbst Issues zuzuweisen.
-
+;-
     \pagebreak
 
     \subsection{Versionskontrolle}
@@ -179,5 +184,36 @@
     \chapter{Schlussfolgerungen}
 
     \section{Zusammenhänge mit dem Studium an der HTW Berlin}
+
+    HTML:
+
+    \begin{minted}[xleftmargin=-25pt]{html}
+    <html>
+        <head>
+            <title>Hello</title>
+        </head>
+        <body>Hello</body>
+    </html>
+    \end{minted}
+
+    SQL:
+
+    \begin{minted}[xleftmargin=20pt,linenos]{sql}
+    SELECT *
+    FROM users
+    WHERE uid = 1
+    \end{minted}
+
+    Python:
+
+    \begin{minted}[xleftmargin=20pt,linenos,breaklines]{python}
+    from gensim.models import FastText
+
+    model: FastText = FastText.load_fasttext_format('embeddings/cc.de.300.bin')
+        .toString()
+        .toJarack()
+
+    print(model.wv['Haus'])
+    \end{minted}
 
 \end{document}
