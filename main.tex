@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[ngerman]{babel}
+\usepackage{biblatex}
+
 
 \renewcommand*{\chapterheadstartvskip}{\vspace*{.25\baselineskip}}
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
@@ -22,15 +24,18 @@
 \definecolor{htworange}{RGB}{255, 95, 0}
 \definecolor{htwgrau}{RGB}{175, 175, 175}
 
-
 \title{Bericht über Werkstudententätig bei der DERICON GmbH}
 \author{Christoph Stach}
 \date{01.11.2016 bis 30.09.2018}
 
+\addbibresource{main.bib}
+\defbibheading{none}[\bibname]{
+%%
+}
 
 \begin{document}
     \begin{titlepage}
-		% Logo
+        % Logo
         \includegraphics[width=0.50\textwidth]{img/Q01_HTW_Berlin_Logo_quer_pos_FARBIG_CMYK.eps}
 
         % Abstand nach logo
@@ -38,53 +43,53 @@
 
         % Textkörper
         \begin{changemargin}{0.5cm}{0.0cm}
-        % Dokumenttyp
-        \color{htwgrau}
-        \normalsize
-        \textsf{\noindent\MakeUppercase{Dokumenttyp}} \vspace{-20pt}\\
-        % Horizontale Linie
-        \noindent\rule{\textwidth}{0.5pt}\vspace{-4pt}
-        % Title
-        \color{black}
-        \huge
-        \textsf{Bericht über Werkstudententätig}
-        \vspace{12pt}
+            % Dokumenttyp
+            \color{htwgrau}
+            \normalsize
+            \textsf{\noindent\MakeUppercase{Dokumenttyp}} \vspace{-20pt}\\
+            % Horizontale Linie
+            \noindent\rule{\textwidth}{0.5pt}\vspace{-4pt}
+            % Title
+            \color{black}
+            \huge
+            \textsf{Bericht über Werkstudententätig}
+            \vspace{12pt}
 
-        % Author
-        \color{htwgrau}
-        \normalsize
-        \textsf{\MakeUppercase{Author}}\\
-        \color{black}
-        \large
-        \textsf{\theauthor}
+            % Author
+            \color{htwgrau}
+            \normalsize
+            \textsf{\MakeUppercase{Author}}\\
+            \color{black}
+            \large
+            \textsf{\theauthor}
 
-        % Zeitraum
-        \color{htwgrau}
-        \normalsize
-        \textsf{\MakeUppercase{Zeitraum}}\\
-        \color{black}
-        \large
-        \textsf{\thedate}
+            % Zeitraum
+            \color{htwgrau}
+            \normalsize
+            \textsf{\MakeUppercase{Zeitraum}}\\
+            \color{black}
+            \large
+            \textsf{\thedate}
 
-        % Am Ende der Seite
-        \vfill
+            % Am Ende der Seite
+            \vfill
 
-        % Firma
-        \color{htwgrau}
-        \normalsize
-        \textsf{\MakeUppercase{Firma}}\\
-        \color{black}
-        \large
-        \textsf{DERICON GmbH}
+            % Firma
+            \color{htwgrau}
+            \normalsize
+            \textsf{\MakeUppercase{Firma}}\\
+            \color{black}
+            \large
+            \textsf{DERICON GmbH}
 
-        % Dozent
-        \color{htwgrau}
-        \normalsize
-        \textsf{\MakeUppercase{Dozent}}\\
-        \color{black}
-        \large
-        \textsf{Prof. Dr. Schüler}
-        \vspace{-60pt}
+            % Dozent
+            \color{htwgrau}
+            \normalsize
+            \textsf{\MakeUppercase{Dozent}}\\
+            \color{black}
+            \large
+            \textsf{Prof. Dr. Schüler}
+            \vspace{-60pt}
         \end{changemargin}
     \end{titlepage}
 
@@ -119,34 +124,37 @@
     Die komplette Entwicklungsabteilung hält jeden Morgen ein Meeting per Videotelefonie, in dem jedes Mitglied kurz berichtet
     was er am Vortag gemacht hat und was er an diesem Tag vorhat.
     Die Entwicklung ist in Sprints von zwei Wochen gegegliedert. Deswegen gibt es ein weiteres Sprintplanungsmeeting am Anfang eines jeden Sprints.
-    Dieser Prozess ist an \footnote{Eine Methode für agiles Projektmanagement.}SCRUM angelehnt.
+    Dieser Prozess ist an SCRUM\footnote{Eine Methode für agiles Projektmanagement.} angelehnt.
 
     \section{Organisation}
 
     \subsection{Issue-Management}
 
-    Die Aufgabenverteilung ist über die Software \footnote{Eine Webanwedung für das Projektmanagement und die Fehlerverwaltung von Software. \\ Link: \url{https://www.atlassian.com/software/jira}}JIRA geregelt.
+    Die Aufgabenverteilung ist über die Software JIRA\footnote{Eine Webanwedung für das Projektmanagement und die Fehlerverwaltung von Software. \\ Link: \url{https://www.atlassian.com/software/jira}} geregelt.
     Alle neuen Features sowie anfallende Bugs werden hier gespeichert.
-    Bei der Sprintplanung wird besprochen welche \footnote{In Jira werden Fehler, Features und andere Artefakte generell als Issues bezeichnet.}Issues
+    Bei der Sprintplanung wird besprochen welche Issues\footnote{In JIRA werden Fehler, Features und andere Artefakte generell als Issues bezeichnet.}
     im kommenden Sprint umgesetzt werden sollen. Die Issues werden über den Sprint hinweck vom Teamleader an die einzelnen Entwickler verteilt. Auch ist es möglich sich selbst Issues zuzuweisen.
-;-
+
     \pagebreak
 
     \subsection{Versionskontrolle}
 
-    Alle Software Projekte werden auf in \footnote{Eine Versionskontrollsystem entwickelt von Linus Torvalds. Link: \url{https://git-scm.com}}GIT-Repositories auf \url{https://bitbucket.org} gespeichert. Wird ein Issue aus JIRA von einem
-    Entwickler fertiggestellt, wird auf Bitbucket ein Pullrequest auf den Development-Branch erstellt. Dieser muss erst von anderen Entwicklern überprüft werden, bevor er in entgültig in den Development-Branch der Software
+    Alle Software Projekte werden auf in gespeichert GIT-Repositories\footnote{Eine Versionskontrollsystem entwickelt von Linus Torvalds. Link: \url{https://git-scm.com}} \\
+    auf \url{https://bitbucket.org} verwaltet.
+    Wird ein Issue aus JIRA von einem Entwickler fertiggestellt, wird auf Bitbucket ein Pullrequest auf den Development-Branch erstellt.
+    Dieser muss erst von anderen Entwicklern überprüft werden, bevor er in entgültig in den Development-Branch der Software
     gemerged wird.
 
     \subsection{Buildmanagement}
 
-    Alle Applikationen werde über \footnote{Ein Server zur Automatisierung von Aufgaben, wird oft für den Build-Prozess von Software eingesetzt. Link: \url{https://jenkins.io}}JENKINS gebaut,
-    treten keine Fehler auf beim Buildprozess auf, werden diese danach von JENKINS auf die Server bei \footnote{Hostingservice für Server und andere Services der Firma Amazon. Link: \url{https://aws.amazon.com}}Amazon AWS kopiert.
+    Alle Applikationen werde über JENKINS\footnote{Ein Server zur Automatisierung von Aufgaben, wird oft für den Build-Prozess von Software eingesetzt. Link: \url{https://jenkins.io}} gebaut,
+    treten keine Fehler auf beim Buildprozess auf, werden diese danach von JENKINS auf die Server bei Amazon AWS\footnote{Hostingservice für Server und andere Services der Firma Amazon. Link: \url{https://aws.amazon.com}} kopiert.
 
     \chapter{Aufgaben}
 
     Während meiner Zeit bei der DERICON GmbH habe ich überwiegend an drei verschiedenen Softwareprodukten gearbeitet.
-    Meine Arbeit bezog sich meistens auf die Implementierung neuer Features und dem Beheben von Fehlern.
+    Meine Arbeit bezog sich meistens auf die Implementierung neuer Features und dem Beheben von Fehlern. In den Unterpunkten *Entwicklung*
+    werde ich jeweils ein paar JIRA-Issues mit einer kurzen Beschreibung referenzieren.
 
     \section{CitrusNG}
 
@@ -156,13 +164,13 @@
     vom Kunden benutzt werden. Jeder Kunde hat unterschiedliche Wünsche deswegen ist die DERIFIN Software sehr stark konfigurierbar, um die Konfigurationen einfacher
     zu verwalten gibt es CitrusNG.
 
-    \pagebreak
-
-    CitrusNG ist eine Webanwendung. Das Frontend ist mit \footnote{Link: \url{https://angularjs.org}}AngularJS (Version 1) implementiert. Das Backend mit SpringBoot Micro-Services.
-    Zwischen Backend und Frontend wird eine weitere PHP-Ebene, mit \footnote{Symfony ist ein weitverbreitetes PHP Framework mit wiederverwendtbaren Bibliotheken und Komponenten der Firma SensioLabs. Link: \url{https://symfony.com}}Symfony 2 implementiert, in Form einer Middleware eingesetzt.
-    Die Middleware sowie das Frontend wird von den Frontent-Entwicklern gepflegt.
-     Das Ziel der Middleware ist es den Frontend-Entwicklern die Möglichkeit zu geben, die Ergebnisse der
-    Backend-Endpunkte zu manipulieren und sie angepasst an das Frontend weiterzuleiten. Hier werden beispielsweise unötige JSON-Felder entfernt oder
+    CitrusNG ist eine Webanwendung. Das Frontend ist mit AngularJS (Version 1)\footnote{JavaScript Framework für die erstellung von Single Page Apps. Link: \url{https://angularjs.org}} implementiert.
+    Das Backend mit SpringBoot\footnote{Java Framework der Firma Pivotal. Link: \url{http://spring.io/projects/spring-boot}} Micro-Services.
+    Zwischen Backend und Frontend wird eine weitere PHP-Ebene, mit Symfony\footnote{Symfony ist ein weitverbreitetes PHP Framework mit wiederverwendtbaren Bibliotheken und Komponenten der Firma SensioLabs. Link: \url{https://symfony.com}}
+    implementiert, in Form einer Middleware eingesetzt. Die Middleware sowie das Frontend wird von den Frontent-Entwicklern gepflegt.
+    Das Ziel der Middleware ist es den Frontend-Entwicklern die Möglichkeit zu geben, die Ergebnisse der
+    Backend-Endpunkte zu manipulieren und sie angepasst an das Frontend weiterzuleiten. 
+    Hier werden beispielsweise unötige JSON\footnote{JavaScript Object Notation: Ein Format für die Übertragung von Objekten zwischen Server und Client Anwendungen}-Felder entfernt oder
     aggregiert, Mock-Daten generiert oder Sortierfunktionen implementiert.
 
     \includegraphics[width=1.00\textwidth]{img/citrusng.png}
@@ -170,7 +178,62 @@
 
     \subsection{Entwicklung}
 
+    An CitrusNG habe ich unterschiedliche Aufgaben vollrichtet. Ich habe insgesamt ca. 1 Jahr an diesem Projekt mitgewirkt.
+
+    Beispiele meiner Arbeit:
+
+    \textbf{CNG-319: Möchten Sie wirklich die Seite verlassen, Sie haben noch ungespeicherte Änderungen}
+
+    Es sollte bei diesem Feature eine Bestätigung angezeigt werden, welche angezeigt wird wenn bereits Änderungen an einem Formular
+    gemacht worden sind und diese vom Benutzer nicht gespeichert wurden bevor er die Seite verlässt.
+
+    Sobald Änderungen am Formular vorliegen muss eine Variable \textit{vm.saved} auf \textit{false} gesetzt werden.
+
+    \begin{minted}[xleftmargin=20pt,linenos,breaklines]{javascript}
+    function changed() {
+        vm.saved = false;
+    }
+    \end{minted}
+
+    Außerdem muss die Variable \textit{\$scope} überwacht werden. Darüber kann bei AngularJS überprüft werden ob der
+    Benutzer die aktuelle Seite verlassen will und man kann auf dieses Ereignis reagieren.
+
+    \begin{minted}[xleftmargin=20pt,linenos,breaklines]{javascript}
+    function DividendsController(apiClient, \$q, \$state, \$scope) {
+        var vm = this;
+        vm.saved = false;
+
+        function onStateChange(event, toState, toParams) {
+            if (!vm.saved) {
+                if (!confirm('Wollen Sie die Seite wirklich verlassen? Ungespeicherte Änderungen gehen verloren!')) {
+                    event.preventDefault();
+                }
+            }
+        }
+    }
+    \end{minted}
+
+    \textbf{CNG-381: DPC Emittierte Produkte - Liste sortierbar machen}
+
+    In diesem Issue sollte, wie der Titel sagt, eine Tabelle von Produkten sortierbar gemacht werden.
+    Die zu dem Zeitpunkt bereits bestehende Tabelle benutzt das AngularJS-Plugin Smart Table\footnote{Link: \url{http://lorenzofox3.github.io/smart-table-website/}}.
+    Das Plugin bietet die Möglich einfach dynamisch generierte Tabellen zu erstellen. Es außerdem bietet Angular Directive um die Tabellen-Spalten sortierbar zu machen.
+
+    \begin{minted}[xleftmargin=20pt,linenos,breaklines]{html}
+    <th>
+        <div st-sort="environmentData.name" class="th-label">
+            Umgebung Name <i class="fa fa-sort"></i>
+        </div>
+    </th>
+    \end{minted}
+
+    Zur Umsetzung der Aufgabe habe ich lediglich die entsprechende \textit{st-sort} Directive zu den zu sortierenbaren Spalten sowie ein Sortier-Icon hinzugefügt.
+    Der Wert der Directive entspricht dem Key im JavaScript-Objekt nach dem sortiert werden soll.
+
     \subsection{Ergebnisse}
+
+    Während meiner Arbeit an CitrusNG habe ich insgesamt 40 JIRA-Issues bearbeitet. Dabei handelte
+    es sich um das Beheben von Fehlern in der Software sowie auch der Implementierung neuer Features.
 
     \section{BrokerUI}
 
@@ -199,37 +262,22 @@
 
     \section{Zusammenhänge mit dem Studium an der HTW Berlin}
 
-    HTML:
+    Durch meine Arbeit bei der DERICON GmbH konnte ich mein Wissen, besonders im Bereich der Webentwicklung, erweitern.
+    Ich konnte viele Ansätze die im Modul \textit{Webentwicklung} an der HTW  Berlin geleehrt wurden anwenden. Ich habe die zwei Frameworks
+    AngularJS und Angular kennengelernt. Besonders mit der Arbeit mit Angular konnte ich Parallelen zum Studium ziehen. Angular
+    verwendet verstärkt Bibliothek \textit{rxjs}, welche das Observable-Pattern implementiert. Dieses wurde bereits im Modul
+    \textit{Programmierung 3} an der HTW Berlin behandelt. Außerdem wird viel mit Functional Programming Methoden gearbeitet die auch bereits in Form
+    von Streams in \textit{Programmierung 3} sowie im Modul \textit{Entwicklung sozialer Anwendungen} geleehrt wurden.
 
-    \begin{minted}[xleftmargin=-25pt]{html}
-    <html>
-        <head>
-            <title>Hello</title>
-        </head>
-        <body>Hello</body>
-    </html>
-    \end{minted}
+    Bei meiner Arbeit an der Software \textit{CitrusNG} habe ich viel mit dem MVC-Paradigma gearbeitet. Dieses wird bei \textit{Symfony}
+    und \textit{AngularJS} viel verwendet. Dadurch konnte ich Verbindungen zu den Modulen \textit{Webentwicklung} und \textit{Programmierung 3}
+    sowie \textit{Software Engineering} herstellen.
 
-    SQL:
+    \chapter{Anhang}
 
-    \begin{minted}[xleftmargin=20pt,linenos]{sql}
-    SELECT *
-    FROM users
-    WHERE uid = 1
-    \end{minted}
+    \section{Literaturverzeichnis}
 
-    Python:
+    \printbibliography[heading=none]
 
-    \begin{minted}[xleftmargin=20pt,linenos,breaklines]{python}
-    from gensim.models import FastText
-
-    model: FastText = FastText.load_fasttext_format('embeddings/cc.de.300.bin')
-
-    # Das ist ein Kommentar
-
-    print(model.similarity('Mann', 'Junge'))
-    print(model.similarity('Mann', 'Kuh'))
-    print(model.most_similar('Mann'))
-    \end{minted}
-
+    \section{Glossar}
 \end{document}

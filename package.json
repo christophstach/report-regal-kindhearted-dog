@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Bericht über Werkstudententätigkeit von Christoph Stach bei der DERICON GmbH.",
   "scripts": {
-    "watch": "latexmk -pvc -pdf -shell-escape -output-directory=out main.tex"
+    "watch": "rm -Rf ./out && mkdir ./out && latexmk -pvc -pdf -shell-escape -output-directory=out main.tex"
   },
   "repository": {
     "type": "git",
