@@ -112,8 +112,8 @@
     \section{Beschreibung der Produkte}
 
     Das Hauptprodukt von DERICON ist die Webanwendung DERIFIN. Außerdem wurde während ich bei der DERICON GmbH eingestellt war,
-    eine neue Version von DERIFIN entwickelt, das sogennante DERIFIN WMS. Welches mehr Features bietet und mit neueren Technologien entwickelt wurde.
-    Neben der Hauptsoftware DERIFIN entwickelt DERICON viele internete Produkte zur besseren Verwaltung von DERIFIN und seiner Kunden.
+    eine neue Version von DERIFIN entwickelt, das sogenannte DERIFIN WMS. Welches mehr Features bietet und mit neueren Technologien entwickelt wurde.
+    Neben der Hauptsoftware DERIFIN entwickelt DERICON viele interne Produkte zur besseren Verwaltung von DERIFIN und seiner Kunden.
 
     \section{Beschreibung des Teams}
 
@@ -123,17 +123,17 @@
     \\ \\
     Die komplette Entwicklungsabteilung hält jeden Morgen ein Meeting per Videotelefonie, in dem jedes Mitglied kurz berichtet
     was er am Vortag gemacht hat und was er an diesem Tag vorhat.
-    Die Entwicklung ist in Sprints von zwei Wochen gegegliedert. Deswegen gibt es ein weiteres Sprintplanungsmeeting am Anfang eines jeden Sprints.
+    Die Entwicklung ist in Sprints von zwei Wochen gegliedert. Deswegen gibt es ein weiteres Sprintplanungsmeeting am Anfang eines jeden Sprints.
     Dieser Prozess ist an SCRUM\footnote{Eine Methode für agiles Projektmanagement.} angelehnt.
 
     \section{Organisation}
 
     \subsection{Issue-Management}
 
-    Die Aufgabenverteilung ist über die Software JIRA\footnote{Eine Webanwedung für das Projektmanagement und die Fehlerverwaltung von Software. \\ Link: \url{https://www.atlassian.com/software/jira}} geregelt.
+    Die Aufgabenverteilung ist über die Software JIRA\footnote{Eine Webanwendung für das Projektmanagement und die Fehlerverwaltung von Software. \\ Link: \url{https://www.atlassian.com/software/jira}} geregelt.
     Alle neuen Features sowie anfallende Bugs werden hier gespeichert.
     Bei der Sprintplanung wird besprochen welche Issues\footnote{In JIRA werden Fehler, Features und andere Artefakte generell als Issues bezeichnet.}
-    im kommenden Sprint umgesetzt werden sollen. Die Issues werden über den Sprint hinweck vom Teamleader an die einzelnen Entwickler verteilt. Auch ist es möglich sich selbst Issues zuzuweisen.
+    im kommenden Sprint umgesetzt werden sollen. Die Issues werden über den Sprint vom Teamleader an die einzelnen Entwickler verteilt. Auch ist es möglich sich selbst Issues zuzuweisen.
 
     \pagebreak
 
@@ -141,35 +141,35 @@
 
     Alle Software Projekte werden auf in gespeichert GIT-Repositories\footnote{Eine Versionskontrollsystem entwickelt von Linus Torvalds. Link: \url{https://git-scm.com}} \\
     auf \url{https://bitbucket.org} verwaltet.
-    Wird ein Issue aus JIRA von einem Entwickler fertiggestellt, wird auf Bitbucket ein Pullrequest auf den Development-Branch erstellt.
-    Dieser muss erst von anderen Entwicklern überprüft werden, bevor er in entgültig in den Development-Branch der Software
+    Wird ein Issue aus JIRA von einem Entwickler fertiggestellt, wird auf BitBucket ein Pull-Request auf den Development-Branch erstellt.
+    Dieser muss erst von anderen Entwicklern überprüft werden, bevor er in endgültig in den Development-Branch der Software
     gemerged wird.
 
     \subsection{Buildmanagement}
 
-    Alle Applikationen werde über JENKINS\footnote{Ein Server zur Automatisierung von Aufgaben, wird oft für den Build-Prozess von Software eingesetzt. Link: \url{https://jenkins.io}} gebaut,
+    Alle Applikationen werde über JENKINS\footnote{Ein Server zur Automatisierung von Aufgaben, wird oft für den Buildprozess von Software eingesetzt. Link: \url{https://jenkins.io}} gebaut,
     treten keine Fehler auf beim Buildprozess auf, werden diese danach von JENKINS auf die Server bei Amazon AWS\footnote{Hostingservice für Server und andere Services der Firma Amazon. Link: \url{https://aws.amazon.com}} kopiert.
 
     \chapter{Aufgaben}
 
     Während meiner Zeit bei der DERICON GmbH habe ich überwiegend an drei verschiedenen Softwareprodukten gearbeitet.
     Meine Arbeit bezog sich meistens auf die Implementierung neuer Features und dem Beheben von Fehlern. In den Unterpunkten *Entwicklung*
-    werde ich jeweils ein paar JIRA-Issues mit einer kurzen Beschreibung referenzieren.
+    werde ich jeweils auf einige JIRA-Issues mit einer kurzen Beschreibung referenzieren.
 
     \section{CitrusNG}
 
     \subsection{Ausgangsposition}
 
-    CitrusNG war das erste Projekt an dem ich mitgewirkt habe. Es ist ein internes Produkt für die Konfiguration der unterschiedlichen DERIFIN umgebungen, die
-    vom Kunden benutzt werden. Jeder Kunde hat unterschiedliche Wünsche deswegen ist die DERIFIN Software sehr stark konfigurierbar, um die Konfigurationen einfacher
-    zu verwalten gibt es CitrusNG.
+    CitrusNG war das erste Projekt an dem ich mitgewirkt habe. Es ist ein internes Produkt für die Konfiguration der unterschiedlichen DERIFIN Umgebungen, die
+    vom Kunden benutzt werden. Jeder Kunde hat unterschiedliche Wünsche. Deswegen ist die DERIFIN Software sehr stark konfigurierbar.
+    Um die Konfigurationen einfacher zu verwalten gibt es CitrusNG.
 
-    CitrusNG ist eine Webanwendung. Das Frontend ist mit AngularJS (Version 1)\footnote{JavaScript Framework für die erstellung von
+    CitrusNG ist eine Webanwendung. Das Frontend ist mit AngularJS (Version 1)\footnote{JavaScript Framework für die Erstellung von
     Single Page Apps. Link: \url{https://angularjs.org}} implementiert.
     Das Backend mit SpringBoot\footnote{Java Framework der Firma Pivotal. Link: \url{http://spring.io/projects/spring-boot}} Micro-Services.
     Zwischen Backend und Frontend wird eine weitere PHP-Ebene, mit Symfony\footnote{Symfony ist ein weitverbreitetes
     PHP Framework mit wiederverwendtbaren Bibliotheken und Komponenten der Firma SensioLabs. Link: \url{https://symfony.com}}
-    implementiert, in Form einer Middleware eingesetzt. Die Middleware sowie das Frontend wird von den Frontent-Entwicklern gepflegt.
+    implementiert, welches in Form einer Middleware eingesetzt. Die Middleware und das Frontend werden von den Frontent-Entwicklern gepflegt.
     Das Ziel der Middleware ist es den Frontend-Entwicklern die Möglichkeit zu geben, die Ergebnisse der
     Backend-Endpunkte zu manipulieren und sie angepasst an das Frontend weiterzuleiten. 
     Hier werden beispielsweise unötige JSON\footnote{JavaScript Object Notation: Ein Format für die Übertragung von
@@ -188,7 +188,7 @@
 
     \subsubsection{CNG-319: Möchten Sie wirklich die Seite verlassen, Sie haben noch ungespeicherte Änderungen}
 
-    Es sollte bei diesem Feature eine Bestätigung angezeigt werden, welche angezeigt wird wenn bereits Änderungen an einem Formular
+    Es sollte bei diesem Feature eine Bestätigung implementiert werden, welche angezeigt wird wenn bereits Änderungen an einem Formular
     gemacht worden sind und diese vom Benutzer nicht gespeichert wurden bevor er die Seite verlässt.
 
     Sobald Änderungen am Formular vorliegen muss eine Variable \textit{vm.saved} auf \textit{false} gesetzt werden.
@@ -219,9 +219,9 @@
 
     \subsubsection{CNG-381: DPC Emittierte Produkte - Liste sortierbar machen}
 
-    In diesem Issue sollte, wie der Titel sagt, eine Tabelle von Produkten sortierbar gemacht werden.
+    In diesem Issue sollte, wie der Titel sagt, eine Tabelle von Finanzprodukten sortierbar gemacht werden.
     Die zu dem Zeitpunkt bereits bestehende Tabelle benutzt das AngularJS-Plugin Smart Table\footnote{Link: \url{http://lorenzofox3.github.io/smart-table-website/}}.
-    Das Plugin bietet die Möglich einfach dynamisch generierte Tabellen zu erstellen. Es außerdem bietet Angular Directive um die Tabellen-Spalten sortierbar zu machen.
+    Das Plugin bietet die Möglich einfach dynamisch generierte Tabellen zu erstellen. Es bietet außerdem eine Angular Directive um die Tabellen-Spalten sortierbar zu machen.
 
     \begin{minted}[xleftmargin=20pt,linenos,breaklines]{html}
     <th>
@@ -248,8 +248,8 @@
 
     \subsection{Ausgangsposition}
 
-    Die Derifin GmbH hatte sich entschieden Ihr Hauptprodukt \textbf{DERIFIN} neu zu entwickeln.
-    Das Projekt wurde jedoch nicht intern entwickelt, sondern von einem Externen Softwareentwicklungs Dienstleister.
+    Die DERICON GmbH hatte sich entschieden Ihr Hauptprodukt \textbf{DERIFIN} neu zu entwickeln.
+    Das Projekt wurde jedoch nicht intern entwickelt, sondern von einem externen Softwareentwicklungs Dienstleister.
     Das neue \textbf{DERIFIN WMS} sollte als hoch konfigurierbares System entwickelt werden, um den vielfältigen
     Kundenwünschen der DERICON GmbH zu entsprechen. Das Ziel war es jegliche Konfiguration der Software in einem
     Datanbanksystem zu hinterlegen, um diese pro Kunde dynamisch anpassbar zu machen.
@@ -260,14 +260,14 @@
     \end{center}
 
     Damit die Mitarbeiter der DERICON GmbH diese Konfigurationen für Ihre Kunden leicht verwalten können, sollte eine
-    weitere Software von grund auf neu entwickelt werden. Diese Software wurde BrokerUI genannt und ich wurde mit der
+    weitere Software von Grund auf neu entwickelt werden. Diese Software wurde BrokerUI genannt und ich wurde mit der
     Entwicklung beauftragt.
 
     \subsection{Entwicklung}
 
-    Der obengezeigt Screenshot zeigt den BrokerUI zum Zeitpunkt der Erstellung der Dokumentation. Dabei wurden folgende
-    Punkte größtenteils von mir Entwickelt. Da die DERICON GmbH auf ihrer Derifin WMS Plattform unterschiedliche Finanzmarktprodukte
-    wie Aktion, Anleihen usw. vertreibt, dienen diese Punkte der konfiguration der Unterchiedlichen Anscht der Finanzprodukte im
+    Auf dem oben gezeigten Screenshot sieht man den BrokerUI zum Zeitpunkt der Erstellung der Dokumentation. Dabei wurden folgende
+    Punkte größtenteils von mir entwickelt. Da die DERICON GmbH auf ihrer Derifin WMS Plattform unterschiedliche Finanzmarktprodukte
+    wie Aktion, Anleihen usw. vertreibt, dienen diese Punkte der Konfiguration der unterchiedlichen Ansichten der Finanzprodukte im
     Frontend.
 
     \subsubsection{Menus}
@@ -278,7 +278,7 @@
     \subsubsection{Modules}
 
     Im Punkt Modules können unterschiedliche Modulkonfigurationen erstellt werden. Diese Modulkonfiguration sind das \textit{Herzstück}
-    von DERIFIN WMS, da Sie bestimmen wie die Unterschiedlichen Sichten im Frontend beim Kunden angezeigt werden sollen.
+    von DERIFIN WMS, da Sie bestimmen wie die unterschiedlichen Ansichten im Frontend beim Kunden angezeigt werden.
 
     \subsubsection{Translations}
 
@@ -291,12 +291,12 @@
 
     \subsubsection{Factsheets}
 
-    Ein Factsheet ist eine Übersichtseite über ein Finanzprodukt. Diese kann auch je nach Kunde unterschiedlich zusammengestellt.
-    Hier können unteranderem Graphen und Warnmeldung für das Finanzprodukt konfiguriert werden. Sie auch
+    Ein Factsheet (auch Produkteinzelansicht genannt) ist eine Übersichtseite über ein Finanzprodukt. Diese kann auch je nach Kunde unterschiedlich zusammengestellt sein.
+    Hier können unteranderem Diagramme und Warnmeldung für das Finanzprodukt konfiguriert werden. Siehe Abbildung 2.3.
 
     \subsection{Ergebnisse}
 
-    Wie im Vorfeld erwähnt wurden die oben aufgezählten Features von mir implementiert. Im weiteren Verlauf habe ich das Projekt
+    Wie im Vorfeld erwähnt, wurden die oben aufgezählten Features von mir implementiert. Im weiteren Verlauf habe ich das Projekt
     abgegeben und es wurden noch weitere Features implementiert, das Design geändert und vom Angular Framework
     auf das Vue.js\footnote{Vue.js ist ähnlich wie Angular ein JavaScript Frontend Framework. Link: \url{https://vuejs.org}}
     Framework umgestellt.
@@ -305,11 +305,11 @@
 
     \subsection{Ausgangsposition}
 
-    Nach meiner Arbeit am \textbf{BrokerUI}, war meine Aufgabe mich in das vom externen Softwaredienstleister
+    Nach meiner Arbeit am \textbf{BrokerUI}, war es meine Aufgabe mich in das vom externen Softwaredienstleister
     entwickelte DERIFN WMS einzuarbeiten. Das Projekt war zu großen Teilen fertig gestellt und sollte, bevor es an die
     Kunden ausgeliefert wurde, noch einen Feinschliff erhalten. Fehlende Features sollte implementiert werden und bestehende
     Fehler behoben werden. Außerdem sollte das Projekt von Angular Version 4 auf Angular Version 6 aktuallisiert werden, damit
-    das Projekt weiterhin zukunfstfähig und erweiterbar bleibt.
+    das Projekt weiterhin zukunftsfähig und erweiterbar bleibt.
 
     \begin{center}
         \includegraphics[width=0.75\textwidth]{img/derifin.png}
@@ -317,52 +317,52 @@
     \end{center}
 
     Aufgrund seiner hohen Konfigurierbarkeit, ist das DERIFIN WMS sehr dynamisch aufgebaut. Der Großteil der HTML Komponenten
-    wird dynamisch im Frontend erstellt und ist durch die im Backend gespeicherten Daten konfigurierbar. Ich wurde mit
+    wird dynamisch im Frontend generiert und ist durch die im Backend gespeicherten Daten konfigurierbar. Ich wurde mit
     der Weiterentwicklung beauftragt, weil ich zu dem Zeitpunkt bereits die meisten Erfahrungen mit dem Angular Framework gesammelt hatte.
 
     \subsection{Entwicklung}
 
     \subsubsection{DFN-547: Download eines Historischen Universums}
 
-    Aufgrund einer Gesetztes Änderungen müssen Banken rückhalten, welche Sie Produkte Sie ihren Kunden in der Vergangenheit
-    angeboten haben. Deswegen muss eine History Funktion dessen Implementiert werden.
+    Aufgrund einer Gesetzesänderungen müssen Banken rückhalten, welche Produkte Sie ihren Kunden in der Vergangenheit
+    angeboten haben. Deswegen musste eine Historien Funktion dessen implementiert werden.
 
     Im habe ich ein Formular erstellt welches die Eingabe eines Daten-Zeitraums erlaubt. Dieser Zeitraum wird zum
-    Backend geschickt, welches mit einer Liste von Finanzprodukten anwortet die in diesem Zeitraum zur Auswahl zur Verfügung
-    standen. Zusätzlich kann über das aufrufen eines anderen Endpunktes eine Excel Liste generiert werden. Das Backend generiert
-    diese Liste und Antworted dem Frontend mit einem URL zur Liste, welche dann durch das Frontend aufgerufen wird um den
+    Backend geschickt, welches mit einer Liste von Finanzprodukten anwortet die in diesem Zeitraum als Auswahl zur Verfügung
+    standen. Zusätzlich kann über das Aufrufen eines anderen Endpunktes eine Excel-Liste generiert werden. Das Backend generiert
+    diese Liste und antwortet dem Frontend mit einer URL zur Liste, welche dann durch das Frontend aufgerufen wird um den
     Download der Excel-Datei zu starten.
 
     \subsubsection{DFN-486: Ladebalken für Produkteinzelansicht}
 
-    Die Produkt einzelansicht wird je nach Kundenkonfiguration (in Abbildung 2.3 zu sehen) dynmaisch generiert.
+    Die Produkteinzelansicht (in Abbildung 2.3 zu sehen) wird je nach Kundenkonfiguration dynamisch generiert.
     Die Daten über das Aussehen der Ansicht werden vom Backend über den sogenannten \textit{structure}-Endpunkt geliefert.
-    Der \textit{data}-Endpunkt liefert die eigentlichen Daten, die in HTML Komponenten, die gemäß des \textit{structure}-Endpunktes
+    Der \textit{data}-Endpunkt liefert die eigentlichen Daten, die in den HTML Komponenten, die gemäß des \textit{structure}-Endpunktes
     generiert werden, angezeigt werden müssen. Alle vom Backend empfangenen Daten werden gemäß des
-    REDUX\footnote{Store-Pattern auf einem \textit{Single Source of Trouth}-Prinzip basiert. Link: \url{https://redux.js.org}}-Pattern.
-    Dieses ist in Angular über die Bibliothek \textit{NGRX}\footnote{Link: \url{https://github.com/ngrx}} implementiert.
+    REDUX\footnote{Store-Pattern auf einem \textit{Single source of truth}-Prinzip basiert. Link: \url{https://redux.js.org}}-Pattern.
+    Dieses ist in Angular über die Bibliothek \textit{ngrx}\footnote{Link: \url{https://github.com/ngrx}} implementiert.
     Alle Daten die im \textit{ngrx}-Store gespeichert sind, können in den Komponenten auf Änderungen überwacht werden.
 
-    Ich habe dem Store zwei neue Eigenschaften hinzugefügt welche den Ladestatus der beiden Endpunkte wiederspiegeln.
-    Dadurch war es mir nötig die beiden Observables der Eigenschaft in der Produkteinzelansicht zu überwachen.
-    Nur in dem Fall in dem der Ladestatus beider auf \textit{false} steht, wird der Inhalt der Produkteinzelansicht angezeigt.
-    Sonst würd ein Ladebalken gezeigt. Das hat zur Folge das beim Laden der Produkteinzahlansicht dem Benutzer zuerst ein Ladebalken
+    Ich habe dem Store zwei neue Eigenschaften hinzugefügt, welche den Ladestatus der beiden Endpunkte wiederspiegeln.
+    Dadurch war es mir möglich die beiden Observables der Eigenschaften in der Produkteinzelansicht zu überwachen.
+    Nur in dem Fall, in dem der Ladestatus beider auf \textit{false} steht, wird der Inhalt der Produkteinzelansicht angezeigt.
+    Sonst wird ein Ladebalken gezeigt. Das hat zur Folge das beim Laden der Produkteinzahlansicht dem Benutzer zuerst ein Ladebalken
     angezeigt wird, solange bis alle notwendingen Daten zum korrekten Anzeigen der Ansicht vorhanden sind.
 
 
     \subsection{Ergebnisse}
 
-    Nach der Behebung einiger Fehler, Aktualisierung auf Angular Version 6 und der Entwicklung mehrerer weiteren Features
-    Wurde das neue DERIFIN WMS bereits an drei unserer Kunden ausgeliefert. Die bisherige Rückmeldung der Kunden ist zufrienden.
+    Nach der Behebung einiger Fehler, Aktualisierung auf Angular Version 6 und der Entwicklung mehrerer Features,
+    wurde das neue DERIFIN WMS bereits an drei unserer Kunden ausgeliefert. Die bisherigen Rückmeldungen der Kunden sind zufrienden.
 
     \chapter{Schlussfolgerungen}
 
     \section{Zusammenhänge mit dem Studium an der HTW Berlin}
 
-    Durch meine Arbeit bei der DERICON GmbH konnte ich mein Wissen, besonders im Bereich der Webentwicklung, erweitern.
+    Durch meine Arbeit bei der DERICON GmbH konnte ich mein Wissen, besonders im Bereich der Webentwicklung erweitern.
     Ich konnte viele Ansätze die im Modul \textit{Webentwicklung} an der HTW  Berlin geleehrt wurden anwenden. Ich habe die zwei Frameworks
     AngularJS und Angular kennengelernt. Besonders mit der Arbeit mit Angular konnte ich Parallelen zum Studium ziehen. Angular
-    verwendet verstärkt Bibliothek \textit{rxjs}, welche das Observable-Pattern implementiert. Dieses wurde bereits im Modul
+    verwendet verstärkt die Bibliothek \textit{rxjs}, welche das Observable-Pattern implementiert. Dieses wurde bereits im Modul
     \textit{Programmierung 3} an der HTW Berlin behandelt. Außerdem wird viel mit Functional Programming Methoden gearbeitet die auch bereits in Form
     von Streams in \textit{Programmierung 3} sowie im Modul \textit{Entwicklung sozialer Anwendungen} geleehrt wurden.
 
